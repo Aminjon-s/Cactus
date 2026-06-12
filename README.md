@@ -1,0 +1,85 @@
+﻿# Cactus: Social Engineering Defense Trainer 🌵
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/shield-check.svg" width="100" height="100" alt="Cactus Logo" />
+  
+  <p>
+    <b>Train your employees to detect, resist, and report social engineering attacks through immersive gamification.</b>
+  </p>
+</div>
+
+---
+
+## 📖 About
+
+**Cactus** is an interactive, gamified cyber-security training platform designed specifically for enterprise environments. It transforms dry security compliance into an engaging experience by placing employees in realistic, interactive scenarios covering phishing, vishing, and pretexting. The goal? To build a robust human firewall.
+
+---
+
+## ✨ Features
+
+- 📅 **Daily Challenge**: Brief, daily security scenarios and trivia to keep security awareness top of mind and build consistent vigilance.
+- 🎙️ **Interactive Voice Simulation**: Immersive voice-based scenarios mirroring real-world vishing (voice phishing) attempts so employees can practice handling high-pressure phone calls.
+- 🛡️ **Tactical Scenarios Cabinets**: Deep-dive, interactive text and interactive modules featuring realistic phishing, baiting, and pretexting attacks.
+- 🏆 **Tournaments**: Company-wide, competitive training events that drive engagement and team building through cyber-security simulations.
+- 📊 **Leaderboards**: Track rankings across departments or the whole company to foster a healthy, competitive spirit around security awareness.
+- 🏅 **Achievements & User Profiles**: A comprehensive gamified progression system. Earn badges, track personal readiness scores, and reward secure behaviors.
+- 🌍 **Multilingual Localization**: Native support for English, Russian, and Uzbek, ensuring diverse teams can learn in their preferred language.
+- 📱 **Telegram Mini App Integration**: Play scenarios and monitor progress directly from Telegram.
+
+---
+
+## 🎮 How It Works
+
+1. **Dashboard Overview**: Employees log in (or enter via Telegram) to view their current rank, active streak, and pending critical challenges.
+2. **Engage in Scenarios**: Select from a Tactical Scenario Cabinet or an Interactive Voice Simulation.
+3. **Investigation & Response**: Probe the "suspect" (powered by AI), flag suspicious activities, and choose the correct protocol.
+4. **Debrief**: Receive immediate, actionable feedback on what was done correctly and which security cues were missed.
+5. **Level Up**: Earn points, climb the Leaderboard, and unlock new Achievements on your Profile.
+
+---
+
+## 🚀 Quick Start (Docker Environment)
+
+The application is completely containerized for easy deployment and local development.
+
+### Prerequisites
+- [Docker & Docker Compose](https://docs.docker.com/get-docker/)
+- [Node.js](https://nodejs.org/) (for local frontend/backend dev)
+
+### 1. Launch Services
+Clone the repository and start the Docker environment. This will spin up the Frontend, Backend, PostgreSQL database, and Redis cache.
+
+\\\ash
+docker-compose up -d --build
+\\\
+
+### 2. Access the Applications
+- **Frontend (Web App)**: [http://localhost:5173](http://localhost:5173)
+- **Backend API**: [http://localhost:3000](http://localhost:3000)
+- **Database Manager (Adminer)**: [http://localhost:8080](http://localhost:8080)
+
+*Default DB Credentials:*
+- **System**: PostgreSQL
+- **Server**: \db\
+- **Username**: \postgres\
+- **Password**: \postgres\
+- **Database**: \cactus_db\ (or as configured in your .env)
+
+### 3. Environment Variables
+Make sure to copy the \.env.example\ to \.env\ in the \/server\ and root directories, adding your AI provider keys (like Gemini) and Telegram Bot tokens.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS, Vite
+- **Backend**: Node.js, Express, TypeScript
+- **AI Integration**: AI-driven suspect modeling for dynamic training interactions
+- **Database**: PostgreSQL (Primary), Redis (Session & Leaderboard Cache)
+- **Infrastructure**: Docker & Docker Compose
+
+---
+<div align="center">
+  <i>Stay Sharp. Protect the Network. Trust but Verify.</i>
+</div>
